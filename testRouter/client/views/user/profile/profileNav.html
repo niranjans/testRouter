@@ -1,0 +1,12 @@
+<template name="profileNav">
+
+<button class="btn btn-default btn-block" id="viewProfileButton">View Profile</button>
+
+	<ul class="nav nav-pills sidebar nav-stacked">
+	  <li role="presentation" class="{{ activeIfTemplateIs 'profileEdit' }}"><a href="{{ pathFor 'profileEdit' }}">Edit Profile</a></li>
+	  <li role="presentation" class="{{ activeIfTemplateIs 'profilePhotos' }}"><a href="{{ pathFor 'profilePhotos' }}">Photos</a></li>
+	  <li role="presentation" class="{{ activeIfTemplateIs 'profileReviews' }}"><a href="{{ pathFor 'profileReviews' }}">Reviews</a></li>
+	  <li role="presentation" class="{{ activeIfTemplateIs 'profileVerifications' }}"><a href="{{ pathFor 'profileVerifications' }}">Verifications</a></li>
+	</ul>
+</template>
+

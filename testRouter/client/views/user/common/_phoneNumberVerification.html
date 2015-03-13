@@ -1,0 +1,84 @@
+<template name="_phoneNumberVerification">
+	<div class="row">
+		{{#if phoneNumber}}
+			<div class="col-md-3">
+				<p>{{phoneNumber}} </p>
+			</div>
+
+			<div class="col-md-2 phone-number-default">
+				<a href="#" class="change-phone-number">change</a>
+			</div>
+		{{else}}
+			<div class="col-md-3 phone-number-default">
+				<a href="#" class="change-phone-number">+ Add new phone number</a>
+			</div>		
+		{{/if}}
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 phone-number-verification-process">
+			<div class="verfication-step-1">
+				<div class="row">
+					<div class="col-md-12">
+						<label>Enter Your Phone Number</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">+1</span>
+						  <input type="text" class="form-control" id="newPhoneText" aria-describedby="basic-addon1"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="row margin-top-10px">
+					<div class="col-md-6">
+						<button type="button" class="btn btn-primary btn-block" id="sms-confirm-button">Confirm via SMS</button>
+					</div>
+
+					<div class="col-md-6">
+						<button type="button" class="btn btn-primary btn-block" id="call-confirm-button">Confirm via Call</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="verfication-step-2">
+				<form id="phoneCodeForm">
+					<div class="row">
+						<div class="col-md-12">
+							<p>We sent a verification code to {{unverifiedPhoneNumber}}</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<p>Please enter the 4-digit code</p>
+						</div>
+
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="phoneCodeInput"/>
+						</div>
+					</div>
+
+					<div class="row margin-top-10px">
+						<div class="col-md-6">
+							<button type="submit" class="btn btn-primary btn-block" id="sms-verify-button">Verify</button>
+						</div>
+
+						<div class="col-md-6">
+							<a href="#" id="cancel-phone-verification">Cancel</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="col-md-6 phone-number-verification-instructions">
+			<p>We will send you a code</p>
+		</div>
+	</div>
+
+
+</template>

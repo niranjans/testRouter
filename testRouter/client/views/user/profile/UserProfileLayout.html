@@ -1,0 +1,24 @@
+<template name="UserProfileLayout">
+	{{> yield region="navBarMain"}}
+
+	<div class="container-fluid no-padding-left-right">
+		<div class="row">
+			<div class="col-md-12">
+				{{> yield region="topUserNav"}}
+			</div>
+		</div>
+	</div>
+
+	<div class="container user-content-container">
+		<div class="row">
+			<div class="col-md-2">
+				{{> yield region="sideProfileNav"}}
+			</div>
+
+			<div class="col-md-10">
+				{{> yield}}
+			</div>
+		</div>
+	</div>
+
+</template>

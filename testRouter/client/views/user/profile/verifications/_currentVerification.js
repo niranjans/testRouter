@@ -1,0 +1,3 @@
+Template._currentVerification.helpers({
+
+});

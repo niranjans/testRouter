@@ -1,0 +1,35 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+accounts-password
+iron:router
+aldeed:collection2
+zimme:iron-router-active
+dburles:collection-helpers
+sacha:spin
+useraccounts:bootstrap@1.8.0
+nemo64:bootstrap
+less
+accounts-google
+service-configuration
+fortawesome:fontawesome
+accounts-facebook
+accounts-ui
+msavin:mongol
+bengott:avatar
+aldeed:autoform
+aldeed:autoform-bs-datepicker
+aldeed:autoform-select2
+natestrauser:select2
+zimme:select2-bootstrap3-css
+chrismbeckett:toastr
+email
+momentjs:moment
+accolver:twilio-meteor
+random
+http
+bozhao:link-accounts

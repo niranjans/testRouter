@@ -1,0 +1,59 @@
+<template name="_moreVerifications">
+	<h2 class="user-profile-secondary-heading">Add More Verifications</h2>
+
+	{{#unless verifiedEmail}}
+		<div class="row">
+			<div class="col-md-2">
+				<label class="control-label">Email Address</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10">
+				<p class="text-muted"> A confirmed email is important to allow us to securely communicate with you.</p>
+				{{#with currentUser.profile}}	 	
+					{{> _primaryEmailInput}}	
+				{{/with}} 	
+			</div>
+
+			<div class="col-md-2">
+				{{> _verifyEmail}}
+			</div>
+		</div>
+	{{/unless}}
+
+	{{#unless verifiedPhoneNumber}}
+		<div class="row">
+			<div class="col-md-2">
+				<label class="control-label">Phone Number</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10">
+				{{#with currentUser.profile}}	 	
+					{{> _phoneNumberVerification}}	
+				{{/with}} 	
+			</div>
+
+		</div>
+	{{/unless}}
+
+	{{#unless verifiedFacebook}}
+		<div class="row margin-top-10px">
+			<div class="col-md-2">
+				<label class="control-label">Facebook</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10">
+				<p class="text-muted">Sign in with Facebook .</p>
+			</div>
+
+			<div class="col-md-2">
+				<button class="btn btn-primary btn-block" id="verify-facebook-button">Verify</button>
+			</div>
+		</div>
+	{{/unless}}
+</template>

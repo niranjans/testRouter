@@ -1,0 +1,52 @@
+<template name="atFormModal">
+{{#unless hide}}
+    <div class="at-form">
+      {{#if showTitle}}
+        {{> atTitle}}
+      {{/if}}
+      {{#if showOauthServices}}
+        {{> atOauth}}
+      {{/if}}
+      {{#if showServicesSeparator}}
+        {{> atSep}}
+      {{/if}}
+      {{#if showError}}
+        {{> atError}}
+      {{/if}}
+      {{#if showResult}}
+        {{> atResult}}
+      {{/if}}
+      {{#if showPwdForm}}
+          {{#if isSignUpState}}
+        	    <button class="at-btn btn btn-lg btn-block btn-default" type="button" id="email-register">
+                Sign up with Email
+              </button>
+              <div id="signUpEmailForm">
+                {{> atPwdForm}}
+              </div>
+          {{else}}
+             {{> atPwdForm}}
+          {{/if}}
+      {{/if}}
+      {{#if showTermsLink}}
+        {{> atTermsLink}}
+      {{/if}}
+      {{#if showSignInLink}}
+        <div class="at-signin-link">
+          <p>
+            If you already have an account 
+            <a href="#" id="at-modal-signIn" class="at-link at-signin">Sign in</a>
+          </p>
+        </div>
+      {{/if}}
+      {{#if showSignUpLink}}
+        <div class="at-signup-link">
+          <p>
+            Don't have an account? 
+            <a href="#" id="at-modal-signUp" class="at-link at-signup">Register</a>
+          </p>
+        </div>
+      {{/if}}
+    </div>
+  {{/unless}}
+</template>

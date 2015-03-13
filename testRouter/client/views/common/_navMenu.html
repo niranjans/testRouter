@@ -1,0 +1,45 @@
+<template name="_navMenu">
+	{{#if isLoggedIn}}
+		<li class="nav-avatar">{{> avatar user=currentUser shape="circle" size="small"}}</li>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Profile <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{{ pathFor 'profileEdit' }}">Edit Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="#" id="logout-button">Logout</a></li>
+          </ul>
+        </li>
+	{{else}}
+		<li><a href="#">HOW IT WORKS</a></li>
+		<li><a href="#" data-toggle="modal" data-target="#modalSignUp">SIGN UP</a></li>
+		<li><a href="#" data-toggle="modal" data-target="#modalSignIn">LOG IN</a></li>
+		<li><button class="btn btn-primary nav-button visible-xs-inline-block">Text Here</button></li>
+	{{/if}}
+
+	<!-- Modal -->
+	<div class="modal fade" style="overflow-y: scroll;" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="SignInLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="row">
+		      <div class="col-xs-8 col-xs-offset-2">
+		      	{{> atFormModal state="signIn"}}
+		      </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="SignUpLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="row">
+		      <div class="col-xs-8 col-xs-offset-2">
+		      	{{> atFormModal state="signUp"}}
+		      </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</template>
