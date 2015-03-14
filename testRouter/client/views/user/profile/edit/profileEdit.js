@@ -1,3 +1,0 @@
-Template.profileEdit.rendered = function() {
-	
-};
